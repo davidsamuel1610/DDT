@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DDT_2_App.Ref"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="DDT" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Manage Game" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,25,14,10">
+            <TextBox x:Name="Commands" HorizontalAlignment="Left" Height="72" Margin="0,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+            <Button x:Name="GoalA" Content="Goal+" HorizontalAlignment="Left" Margin="15,280,0,0" VerticalAlignment="Top" Width="134" Click="GoalA_Click"/>
+            <TextBlock x:Name="TeamA" HorizontalAlignment="Left" Margin="10,151,0,0" TextWrapping="Wrap" Text="TeamA" VerticalAlignment="Top" Height="57" Width="178" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="193,151,0,0" TextWrapping="Wrap" Text="VS" VerticalAlignment="Top" Height="57" FontSize="36" TextAlignment="Center"/>
+            <TextBlock x:Name="TeamB" HorizontalAlignment="Left" Margin="239,151,0,0" TextWrapping="Wrap" Text="TeamB" VerticalAlignment="Top" Height="57" Width="207" FontSize="24" TextAlignment="Right"/>
+            <Button x:Name="GoalB" Content="Goal+" HorizontalAlignment="Left" Margin="321,280,0,0" VerticalAlignment="Top" Width="133" Click="GoalB_Click"/>
+            <Button x:Name="YellowA" Content="Yellow" HorizontalAlignment="Left" Margin="15,352,0,0" VerticalAlignment="Top" Width="134" Click="YellowA_Click"/>
+            <Button x:Name="YellowB" Content="Yellow" HorizontalAlignment="Left" Margin="320,352,0,0" VerticalAlignment="Top" Click="YellowB_Click" Width="133"/>
+            <Button x:Name="start" Content="Start Game" HorizontalAlignment="Left" Margin="136,208,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.753,0.653" Width="198" Click="start_Click"/>
+            <Button x:Name="RedB" Content="Red" HorizontalAlignment="Left" Margin="320,417,0,0" VerticalAlignment="Top" Width="134" Click="RedB_Click"/>
+            <Button x:Name="RedA" Content="Red" HorizontalAlignment="Left" Margin="15,417,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.92,1.876" Width="134" Click="RedA_Click"/>
+            <Button x:Name="stop" Content="Stop Game" HorizontalAlignment="Left" Margin="136,478,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.753,3.182" Width="198" Click="stop_Click"/>
+            <TextBlock x:Name="ScoreA" HorizontalAlignment="Left" Margin="149,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="85"/>
+            <TextBlock x:Name="ScoreB" HorizontalAlignment="Left" Margin="239,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="95" TextAlignment="Right"/>
+            <TextBlock x:Name="YellowAtxt" HorizontalAlignment="Left" Margin="154,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="80"/>
+            <TextBlock x:Name="YellowBtxt" HorizontalAlignment="Left" Margin="239,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="81" TextAlignment="Right"/>
+            <TextBlock x:Name="RedAtxt" HorizontalAlignment="Left" Margin="154,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="80"/>
+            <TextBlock x:Name="RedBtxt" HorizontalAlignment="Left" Margin="239,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="82" TextAlignment="Right"/>
+            <TextBox x:Name="FixtureId" HorizontalAlignment="Left" Height="72" Margin="0,10,0,0" TextWrapping="Wrap" Text="Enter FixtureId" VerticalAlignment="Top" Width="334" Tap="FixtureId_Tap" TextChanged="FixtureId_TextChanged"/>
+            <Button x:Name="Load" Content="Load" HorizontalAlignment="Left" Margin="321,10,0,0" VerticalAlignment="Top" Click="Load_Click_1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="10" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="458">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="109*"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="132*"/>
+                <ColumnDefinition Width="156*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
