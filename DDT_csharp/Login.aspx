@@ -108,7 +108,7 @@
    <h1>
        Username: <asp:TextBox ID="txtUser" runat="server" Height="16px" Width="128px" style="margin-left: 7px"></asp:TextBox>
        <br />
-       Password:<asp:TextBox ID="txtPassword" runat="server"  Height="16px" Width="128px" style="margin-left: 24px"></asp:TextBox>
+       Password:<asp:TextBox ID="txtPassword" runat="server"  Height="16px" Width="128px" style="margin-left: 24px" TextMode="Password"></asp:TextBox>
        <br />
        
        <br />
