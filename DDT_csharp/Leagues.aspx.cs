@@ -14,6 +14,7 @@ namespace DDT_csharp
         protected void Page_Load(object sender, EventArgs e)
         {
             ltNotify.Text = Data.Log();
+            //gone
         }
     }
 }
