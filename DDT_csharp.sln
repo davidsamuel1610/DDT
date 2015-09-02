@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDT_csharp", "DDT_csharp\DDT_csharp.csproj", "{4BEDF2B7-A717-485E-9858-BF234FE2F858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDT_2_App", "..\DDT_2_App\DDT_2_App\DDT_2_App.csproj", "{B9BEDE75-7698-47C6-BE35-8736D3225D4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDT_2_App", "DDT_2_App\DDT_2_App.csproj", "{B9BEDE75-7698-47C6-BE35-8736D3225D4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDT3_Web_Server", "..\DDT3_Web_Server\DDT3_Web_Server\DDT3_Web_Server.csproj", "{8589E48F-DAAC-466A-8609-1BCFF45D6182}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDT3_Web_Server", "DDT3_Web_Server\DDT3_Web_Server.csproj", "{8589E48F-DAAC-466A-8609-1BCFF45D6182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
