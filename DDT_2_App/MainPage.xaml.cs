@@ -24,7 +24,12 @@ namespace DDT_2_App
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+        }
 
+        private void Signup_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/SignUp.xaml", UriKind.Relative));
         }
 
         // Sample code for building a localized ApplicationBar

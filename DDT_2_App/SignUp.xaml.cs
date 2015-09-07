@@ -59,5 +59,10 @@ namespace DDT_2_App
                 UserData.Text = Clean[0] + "\n" + "Your New Username is: " + Clean[1];
             }
         }
+
+        private void Cont_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+        }
     }
 }
