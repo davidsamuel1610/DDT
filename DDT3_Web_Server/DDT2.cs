@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace DDT2
 {
@@ -36,6 +37,14 @@ namespace DDT2
                     data.Add(String.Format("{0},{2},{3},{4},{5},{6},{7},{8},{9},{10}", reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6], reader[7], reader[8], reader[9], reader[10]));
                 } 
                  */
+
+                var md5 = new MD5CryptoServiceProvider();
+                var mdata = Encoding.ASCII.GetBytes(password);
+                var Md5data = md5.ComputeHash(mdata);
+
+                var hashedPassword = Encoding.ASCII.GetString(Md5data);
+
+
                 string command = String.Format("SELECT * FROM `users` WHERE `userId` = '{0}'", userId);
                 MySqlCommand select = new MySqlCommand(command, conn);
                 MySqlDataReader reader;
@@ -48,7 +57,7 @@ namespace DDT2
                     data.Add(String.Format("{0}",reader[2]));
                    data.Add(String.Format("{0}",reader[3]));
                } if (data.Count() < 1) { return "`Username Does Not Exist!`"; }
-                 if(password==data[3])
+                 if(hashedPassword == data[3])
                 {
                     conn.Close(); return "`Login Success" + ',' + data[0] + ',' + data[1] + ',' + data[2] + '`';
                 }
@@ -69,12 +78,19 @@ namespace DDT2
                 MySqlConnection conn;
             string userId = String.Format("{0}{1}{2}", name[0], name[1], id);
 
+            var md5 = new MD5CryptoServiceProvider();
+            var mdata = Encoding.ASCII.GetBytes(password);
+            var Md5data = md5.ComputeHash(mdata);
+
+            var hashedPassword = Encoding.ASCII.GetString(Md5data);
+
+
             try 
             {
                 conn = new MySqlConnection(connect);
                 conn.Open();
 
-                string command = String.Format("INSERT INTO users (userId, Name, password,email,Team) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", userId, name, password,email,team);
+                string command = String.Format("INSERT INTO users (userId, Name, password,email,Team) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", userId, name, hashedPassword, email,team);
                 MySqlCommand select = new MySqlCommand(command, conn);
                 MySqlDataReader reader;
                 reader = select.ExecuteReader();
@@ -88,7 +104,7 @@ namespace DDT2
                {
                    data.Add(String.Format("{0}",reader[3]));
                }
-                 if(password==data[0])
+                 if(hashedPassword == data[0])
                 {
                     conn.Close(); return "`User Added," + userId+'`';
                 }

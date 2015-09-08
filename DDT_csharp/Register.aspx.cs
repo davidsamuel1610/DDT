@@ -20,6 +20,7 @@ namespace DDT_csharp
         protected void cmdRegister_Click(object sender, EventArgs e)
         {
             //Data.singup(txtUser.Text, txtPassword.Text, txtEmail.Text, txtTeam.Text);
+            
             Data.singup(txtUser.Text, txtPassword.Text, txtEmail.Text, txtTeam.Text);
             Response.Redirect("/Login.aspx");
         }

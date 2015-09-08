@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DDT2;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DDT_csharp
 {
@@ -18,6 +20,9 @@ namespace DDT_csharp
 
         protected void cmdLogin_Click(object sender, EventArgs e)
         {
+
+            
+
             string Responsez = Data.login(txtPassword.Text, txtUser.Text);
             if (Responsez.Contains("Login Success"))
             {

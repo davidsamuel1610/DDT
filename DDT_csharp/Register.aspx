@@ -107,9 +107,9 @@
    
    <section class="group5">
    <h1>
-       Username: <asp:TextBox ID="txtUser" runat="server" Height="16px" Width="128px" style="margin-left: 7px"></asp:TextBox>
+       Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtUser" runat="server" Height="16px" Width="128px" style="margin-left: 7px"></asp:TextBox>
        <br />
-       Password:<asp:TextBox ID="txtPassword" runat="server" Height="16px" Width="128px" style="margin-left: 24px"></asp:TextBox>
+       Password:<asp:TextBox ID="txtPassword" runat="server" Height="16px" Width="128px" style="margin-left: 24px" TextMode="Password"></asp:TextBox>
        <br />
        Email:<asp:TextBox ID="txtEmail" runat="server" Height="16px" Width="128px" style="margin-left: 66px"></asp:TextBox>
        <br />
