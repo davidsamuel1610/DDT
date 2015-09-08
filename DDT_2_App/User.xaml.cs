@@ -18,10 +18,10 @@ namespace DDT_2_App
 
             LogView = new WebBrowser();
             LogView.Navigate(new Uri(AppResources.Server + "League.aspx"));
-            //int loadbrowser = 0;
-            //while (LogView.SaveToString().Length < 1) { loadbrowser++; }
-            //string x = LogView.SaveToString();
-            //MessageBox.Show("Done");
+            int loadbrowser = 0;
+            while (LogView.SaveToString().Length < 1) { loadbrowser++; }
+            string x = LogView.SaveToString();
+            MessageBox.Show("Done");
 
 
             InitializeComponent();

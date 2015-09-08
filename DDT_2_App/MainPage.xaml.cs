@@ -17,19 +17,14 @@ namespace DDT_2_App
         public MainPage()
         {
             InitializeComponent();
-            AppResources.Server = "http://mark14:1482/";
+            AppResources.Server = "http://169.254.171.14:1482/";
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
-        }
 
-        private void Signup_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/SignUp.xaml", UriKind.Relative));
         }
 
         // Sample code for building a localized ApplicationBar
