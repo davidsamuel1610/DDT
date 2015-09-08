@@ -10,7 +10,7 @@ namespace DDT2
     public class User
     {
         public DateTime Start;
-        public string connect = "server=localhost;uid=root;" + "pwd=password;database=ddt_data";
+        public string connect = "server=localhost;uid=ddt;" + "pwd=123456789;database=ddt_data";
         public DateTime Stop;
         public List<string> teamId = new List<string>();
         int position = 1;
