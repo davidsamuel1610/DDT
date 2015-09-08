@@ -28,8 +28,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox x:Name="UserId" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="456" Tap="UserId_Tap"/>
-            <TextBox x:Name="Password" HorizontalAlignment="Left" Height="72" Margin="0,72,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="456" Tap="Password_Tap"/>
+            <TextBox x:Name="UserId" HorizontalAlignment="Left" Height="78" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="456" Tap="UserId_Tap"/>
             <Button x:Name="LogIn" Content="Login" HorizontalAlignment="Left" Margin="140,178,0,0" VerticalAlignment="Top" Click="LogIn_Click"/>
             <phone:WebBrowser x:Name="Browser12" HorizontalAlignment="Left" Margin="433,583,0,0" VerticalAlignment="Top" Width="11" Height="12" LoadCompleted="Browser12_LoadCompleted" RenderTransformOrigin="0.5,0.5" Opacity="0" Visibility="Collapsed">
                 <phone:WebBrowser.RenderTransform>
@@ -37,6 +36,7 @@
                 </phone:WebBrowser.RenderTransform>
             </phone:WebBrowser>
             <TextBlock x:Name="Response" HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="93" Width="436"/>
+            <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="0,79,0,0" VerticalAlignment="Top" Width="456" Height="79" Tap="Password_Tap"/>
 
         </Grid>
     </Grid>

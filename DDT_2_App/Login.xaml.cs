@@ -21,9 +21,9 @@ namespace DDT_2_App
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             //WebBrowser browser1 = new WebBrowser();
-            //browser1.Source = new Uri("http://mc:1482/aspx?UserId=Iz001&MatchId=1");
+            //browser1.Source = new Uri("http://mark14:1482/aspx?UserId=Iz001&MatchId=1");
            // string Request = ;
-            Browser12.Navigate(new Uri(AppResources.Server + "Login.aspx?Type=Login&Name=" + UserId.Text + "&Password=" + Password.Text));
+            Browser12.Navigate(new Uri(AppResources.Server + "Login.aspx?Type=Login&Name=" + UserId.Text + "&Password=" + Password.Password));
             //string Temp = Browser12.SaveToString();
             string Data = null;// 
             int loadbrowser = 0;
@@ -56,7 +56,7 @@ namespace DDT_2_App
 
         private void Password_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            Password.Text = "";
+            Password.Password = "";
         }
 
     }
