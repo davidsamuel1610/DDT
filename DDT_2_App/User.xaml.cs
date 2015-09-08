@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using DDT_2_App.Resources;
+using System.IO;
 
 namespace DDT_2_App
 {
