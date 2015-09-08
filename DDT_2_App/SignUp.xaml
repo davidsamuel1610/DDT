@@ -37,8 +37,12 @@
             <TextBox x:Name="Password" HorizontalAlignment="Left" Height="72" Margin="0,72,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="456" Tap="Password_Tap"/>
             <Button x:Name="signup" Content="Signup" HorizontalAlignment="Left" Margin="161,315,0,0" VerticalAlignment="Top" Click="signup_Click"/>
             <TextBlock x:Name="UserData" HorizontalAlignment="Left" Margin="10,392,0,0" TextWrapping="Wrap" Text="User Data" VerticalAlignment="Top" Height="101" Width="436"/>
-            <Button x:Name="Cont" Content="Continue" HorizontalAlignment="Left" Margin="161,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.169,0.434" Click="Cont_Click">
-              
+            <Button x:Name="Cont" Content="Continue" HorizontalAlignment="Left" Margin="161,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.169,0.434">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/Login.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
             </Button>
             <TextBox x:Name="e_mail" HorizontalAlignment="Left" Height="72" Margin="0,144,0,0" TextWrapping="Wrap" Text="e-mail" VerticalAlignment="Top" Width="456" Tap="e_mail_Tap"/>
             <TextBox x:Name="team" HorizontalAlignment="Left" Height="72" Margin="0,216,0,0" TextWrapping="Wrap" Text="Team" VerticalAlignment="Top" Width="456" Tap="team_Tap"/>
