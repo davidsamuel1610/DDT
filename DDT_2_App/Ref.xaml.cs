@@ -1,4 +1,4 @@
-﻿using Microsoft.Phone.Controls;
+using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System;
 using System.Collections.Generic;
@@ -17,12 +17,24 @@ namespace DDT_2_App
         public int scoreA = 0, scoreB = 0, yellowA = 0, yellowB = 0, redA = 0, redB = 0;
         List<Fixture> Fixtures = new List<Fixture>();
 
+		ispatcherTimer mytimer = new DispatcherTimer();
+        int currentcount = 0;
+		
         public Ref()
         {
             PopulateFixtures();
             //SelFix.ItemsSource = Fixtures;
             InitializeComponent();
+			
+			mytimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
+            mytimer.Tick += new EventHandler(mytime_Tick);
+			
             
+        }
+		
+		private void mytime_Tick(object sender, EventArgs e)
+        {
+            Commands.Text = (++currentcount).ToString();
         }
 
         private void PopulateFixtures()
@@ -70,6 +82,7 @@ namespace DDT_2_App
             else output = DataNeeded;
 
             Commands.Text = output;
+			mytimer.Start();
         }
 
         private void GoalA_Click(object sender, RoutedEventArgs e)
@@ -217,7 +230,7 @@ namespace DDT_2_App
             string[] RawHtmlSplit = Data.Split('`');
             string DataNeeded = RawHtmlSplit[1];
             string output = "";
-            if (DataNeeded.Contains("Has Started"))
+            if (!DataNeeded.Contains("Has Started"))
             {
                 string[] MatchInfo = DataNeeded.Split(',');
                 AppResources.TeamA = MatchInfo[1];
@@ -228,6 +241,7 @@ namespace DDT_2_App
             else output = DataNeeded;
 
             Commands.Text = output;
+            mytimer.Stop();
         }
 
 
